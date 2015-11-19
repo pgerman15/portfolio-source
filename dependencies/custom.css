@@ -1,0 +1,196 @@
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+body{
+	 background-image: url("http://i.ytimg.com/vi/XsgG5mZY_wo/maxresdefault.jpg");
+	 background-size: 1600px 1024px;
+	 background-repeat: no-repeat;
+	 background-position: center; 
+	 background-attachment: fixed;
+}
+
+ul{
+    list-style-type: none;
+	margin-left: -30px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+	.login-box{
+		position: absolute;
+		left: 36%;
+		top: 25%;
+		background-color: rgba(190, 29, 21,0.9);
+		width:28%;
+		height:40%;
+		min-height: 300px;
+		border-radius: 25px;
+		color: blue;
+	}
+	
+	#sogeti-spade{
+		position: absolute;
+		left: 47%;
+		bottom: 70%;
+		width: 6%;
+	}
+} 
+
+@media only screen and (max-width: 800px) {
+	.login-box{
+		position: absolute;
+		left: 28%;
+		top: 25%;
+		background-color: rgba(190, 29, 21,0.9);
+		width:44%;
+		height:48%;
+		min-height: 300px;
+		border-radius: 25px;
+	}
+	
+	#sogeti-spade{
+		position: absolute;
+		left: 46%;
+		bottom: 70%;
+		width: 8%;
+	}
+} 
+
+@media only screen and (min-width: 1301px) {
+	.login-box{
+		position: absolute;
+		left: 38%;
+		top: 30%;
+		background-color: rgba(190, 29, 21,0.9);
+		width:22%;
+		height:40%;
+		min-width: 220px;
+		min-height: 325px;
+		border-radius: 25px;
+	}
+	#sogeti-spade{
+		position: absolute;
+		left: 47%;
+		bottom: 70%;
+		width: 6%;
+	}
+	
+	.lougout-icon{
+		height: 10;
+		width: 10;
+	}
+
+	.right-justified{
+		position: absolute;
+		left: 90%;
+		top: 5%;
+	}
+}
+
+@media only screen and (max-width: 420px) {	/*order matters*/
+	.login-box{
+		position: absolute;
+		left: 15%;
+		top: 25%;
+		background-color: rgba(190, 29, 21,0.9);
+		width:70%;
+		height:45%;
+		min-height: 260px;
+		border-radius: 25px;
+	}
+	
+	#sogeti-spade{
+		position: absolute;
+		left: 43%;
+		bottom: 70%;
+		width: 14%;
+	}
+}
+
+@media only screen and (max-width: 380px) {	/*order matters*/
+	.login-box{
+		position: absolute;
+		left: 15%;
+		top: 25%;
+		background-color: rgba(190, 29, 21,0.9);
+		width:70%;
+		height:45%;
+		min-height: 250px;
+		border-radius: 25px;
+	}
+	
+	#sogeti-spade{
+		position: absolute;
+		min-width: 100px;
+		left: 46%;
+		bottom: 70%;
+		width: 8%;
+	}
+}
+
+@media only screen and (max-width: 325px) {	/*order matters*/
+	.login-box{
+		position: absolute;
+		left: 15%;
+		top: 25%;
+		background-color: rgba(190, 29, 21,0.9);
+		width:70%;
+		height:50%;
+		min-height: 270px;
+		border-radius: 25px;
+	}
+	
+	#sogeti-spade{
+		position: absolute;
+		left: 40%;
+		bottom: 70%;
+		min-width: 100px;
+		right: 20%;
+	}
+} 
+#password{
+	background-color: rgba(255, 255, 255, 0.2);
+	margin-left: 17%;
+	margin-top: 10%;
+	width: 66%;
+	height: 45px;
+	border-radius:5px;
+	padding: 5px;
+	border: 1px solid white;
+}
+
+#email{
+	background-color: rgba(255, 255, 255, 0.2);
+	margin-left: 17%;
+	margin-top: 20%;
+	width: 66%;
+	height: 45px;
+	border-radius:5px;
+	padding: 5px;
+	border: 1px solid white;
+}
+
+#login{
+	background-color: rgba(255, 255, 255, 1);
+	margin-left: 28%;
+	margin-top: 10%;
+	width: 44%;
+	height: 45px;
+	border-radius:5px;
+	padding: 5px;
+	border: 1px solid white;
+	color: rgb(190, 29, 21);
+	font-size: 150%;
+}
+
+#login-header{
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 200%;
+}
+

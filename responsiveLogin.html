@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello AngularJS</title>
+		<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="dependencies/custom.css?1.13"></link>
+		<meta name="viewport" content="width=device-width"/>
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="customersCtrl" ng-init="username='';password=''">
+			<div class="login-box">
+				<div class="form-holder">
+					<form novalidate class="simple-form">
+						<input id="email" type="email" ng-model="username" onfocus="focusEmail()" onblur="blurEmail()"></br>
+						<input id="password" type="password" ng-model="password" onfocus="focusPassword()" onblur="blurPassword()"/>
+						<button id="login" ng-click="login()">Login</button>
+					</form>
+				</div>
+			</div>
+		<!--<p>{{username}}</p>
+			<p>{{password}}</p>
+			<ul>
+				<li ng-repeat="x in names">
+					{{x.Login}}
+				</li>
+			</ul>-->
+		</div>
+		<!--<img id="sogeti-spade" src="http://s22.postimg.org/k97y0tj71/spade_bigger.jpg">-->
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('customersCtrl', function($scope, $http) {
+			  $scope.login = function(){
+					$http({method: 'GET', url: "http://localhost:8080/premade/sayhello?username=" + $scope.username + "&password=" + $scope.password}).
+					then(function(response) {
+						//alert("login attempt 2.1");
+						//alert(JSON.stringify(response.data));
+						if(JSON.stringify(response.data).indexOf("true") > -1){
+							//window.location.assign("http://localhost:8080/premade/landingPage.html");
+							//do nothing for now
+						}
+					}, function(response) {
+						alert("login attempt 2 fail");
+						alert(JSON.stringify(response.data || "Request failed"));
+					});
+			  }
+			});
+		</script>
+		<script>
+			function focusEmail(){
+				document.getElementById('email').style.backgroundColor = "rgba(255, 255, 255, 1)";
+			}
+		</script>
+		<script>
+			function focusPassword(){
+				document.getElementById('password').style.backgroundColor = "rgba(255, 255, 255, 1)";
+			}
+		</script>
+		<script>
+			function blurEmail(){
+				document.getElementById('email').style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+			}
+		</script>
+		<script>
+			function blurPassword(){
+				document.getElementById('password').style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+			}
+		</script>
+	</body>
+</html>
