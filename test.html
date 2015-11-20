@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	</head>
+	<body style='background-color: #184D72'>
+	<div id="forecast">
+	<div class="day"><div id="day0" class="dayName">Mon</div><br><img id="pic0" class="picture" src="https://app.sogeti.mobi/sites/travelandtransport/files/svgCW.svg"><br><br><div 	id="forecastHiLo0" class="forecastHiLo">71°/55°</div></div>
+	<div class="day"><div id="day1" class="dayName">Tue</div><br><img id="pic1" class="picture" src="https://app.sogeti.mobi/sites/travelandtransport/files/svgCW.svg"><br><br><div id="forecastHiLo1" class="forecastHiLo">77°/68°</div></div>
+	<div class="day"><div id="day2" class="dayName">Wed</div><br><img id="pic2" class="picture" src="https://app.sogeti.mobi/sites/travelandtransport/files/svgTW.svg"><br><br><div id="forecastHiLo2" class="forecastHiLo">78°/50°</div></div>
+	<div class="day"><div id="day3" class="dayName">Thu</div><br><img id="pic3" class="picture" src="https://app.sogeti.mobi/sites/travelandtransport/files/svgCW.svg"><br><br><div id="forecastHiLo3" class="forecastHiLo">70°/51°</div></div>
+	<div class="day"><div id="day4" class="dayName">Fri</div><br><img id="pic4" class="picture" src="https://app.sogeti.mobi/sites/travelandtransport/files/svgCW.svg"><br><br><div id="forecastHiLo4" class="forecastHiLo">63°/49°</div></div>
+</div>
+
+	<style>
+		li.L0, li.L1, li.L2, li.L3,
+		li.L5, li.L6, li.L7, li.L8
+		{ list-style-type: decimal !important }
+
+	
+	    #forecast{
+	        width: 100%;
+	        max-width: 500px;
+	        height: 175px;
+	        margin: auto;
+	    }
+		.day{
+			width: 17%;
+			height: 100%;
+			border-left: 1px solid white;
+			float: left;
+	                padding-left: 5px;
+	                padding-right: 5px;
+		}
+		.day:last-child{
+	        border-right: 1px solid white;
+	    }
+		.dayName{
+			text-align: center;
+			color: white;
+		}
+	
+	    .picture{
+			width: 100%;
+	                min-height: 90px;
+		}
+		
+		.forecastHiLo{
+			text-align: center;
+			color: white;
+		}
+	</style>
+	<script>
+		function doForecast(city, state){
+			var days = [];
+			var highs = [];
+			var lows = [];
+			var texts = [];
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + city + "%2C%20" + state + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", false);
+			xhr.send();
+			var resp = xhr.responseText;
+			resp = resp.substring(resp.indexOf('forecast\":[{'));
+			
+			while(resp.indexOf("day") > -1){
+			    var day = resp.substring(resp.indexOf("day") + 6, resp.indexOf("high") - 3);
+			    var high = resp.substring(resp.indexOf("high") + 7, resp.indexOf("low") - 3);
+			    var low = resp.substring(resp.indexOf("low") + 6, resp.indexOf("text") - 3);
+			    var text = resp.substring(resp.indexOf("text") + 7, resp.indexOf("}") - 1);
+			    resp = resp.substring(resp.indexOf("}") + 1);
+			    //alert("Day: " + day + ", High: " + high + ", Low: " + low + ", Text: " + text);
+			    days.push(day);
+			    highs.push(high);
+			    lows.push(low);
+			    texts.push(text);
+			}
+			
+			for(var i = 0; i < days.length; i++){
+			    var source = "";
+			    if(texts[i].indexOf("fair") > -1 || texts[i].indexOf("Sunny") > -1 || texts[i].indexOf("Clear") > -1){
+			        source = "https://app.sogeti.mobi/sites/travelandtransport/files/svgSW.svg";
+			    }else if(texts[i].indexOf("Cloud") > -1){
+			        source = "https://app.sogeti.mobi/sites/travelandtransport/files/svgCW.svg";
+			    }else if(texts[i].indexOf("Thunder") > -1 || texts[i].indexOf("Strong Storms") > -1){
+			        source = "https://app.sogeti.mobi/sites/travelandtransport/files/svgTW.svg";
+			    }else if(texts[i].indexOf("Showers") > -1 || texts[i].indexOf("Rain") > -1){
+			        source = "https://app.sogeti.mobi/sites/travelandtransport/files/svgRW.svg";
+			    }else{
+			        alert("weather was " + texts[i]);
+			    }
+				document.getElementById("day" + i).innerHTML = days[i];
+			    document.getElementById("pic" + i).src = source;
+				document.getElementById("forecastHiLo" + i).innerHTML = highs[i] + "°/" + lows[i] + "°";
+			
+			}
+		}
+	</script>
+	
+	<script>
+		doForecast("austin", "tx");
+	</script>
+
+
+
+	</body>
+
+</html>
