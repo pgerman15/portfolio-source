@@ -8,7 +8,6 @@
 .card{
 	margin: 10px;
 	border-style: solid;
-	padding: 45%;
 	height: 8vh;
-	
+	vertical-align: middle;
 }
