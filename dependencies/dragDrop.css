@@ -1,5 +1,6 @@
 .left-container{
 	float: left;
 	border-style: solid;
-	color: blue;
+	height: 100%;
+	
 }
