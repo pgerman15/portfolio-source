@@ -31,7 +31,7 @@
 				ev.preventDefault();
 				var data = ev.dataTransfer.getData("text");
 				console.log('target ID: ' + ev.target.id);
-				if(ev.target.id.indexOf('group-container') > -1){
+				if(ev.target.id == 'group-container'){
 					ev.target.appendChild(document.getElementById(data));
 				}else{
 					console.log('cannot put a card inside another card');
