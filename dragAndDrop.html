@@ -38,6 +38,19 @@
 					console.log('cannot put a card inside another card');
 				}
 			}
+			
+			function setupDrag(){
+			document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
+			var cards = document.getElementsByClassName('card');
+			console.log(cards);
+			var draggable = document.getElementById('draggable');
+			
+			draggable.addEventListener('touchmove', function(event) {
+				// Place element where the finger is
+				draggable.style.left = event.pageX-25 + 'px';
+				draggable.style.top = event.pageY-25 + 'px';
+			}, false);
+		}
 		</script>
 	</head>
 	
