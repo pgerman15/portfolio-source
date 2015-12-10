@@ -46,6 +46,7 @@
 				
 				for(var i = 0; i < cards.length; i++){
 					var draggable = document.getElementById(cards[i].id);
+					console.log('added listener for ' + draggable);
 					draggable.addEventListener('touchmove', function(event) {
 						// Place element where the finger is
 						//alert('moving');
