@@ -18,3 +18,10 @@
 	display: table-cell;
 	vertical-align: middle;
 }
+
+.right-container{
+	float: right;
+	border-style: solid;
+	height: 97vh;
+	width: 80%;
+}
