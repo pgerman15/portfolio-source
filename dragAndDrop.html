@@ -32,7 +32,7 @@
 				var data = ev.dataTransfer.getData("text");
 				console.log('target ID: ' + ev.target.id);
 				console.log('target class: ' + ev.target.class);
-				if(ev.target.id.indexOf('uxcard' > -1)){
+				if(ev.target.id.indexOf('uxcard') == -1){
 					ev.target.appendChild(document.getElementById(data));
 				}
 			}
