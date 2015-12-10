@@ -30,7 +30,8 @@
 			function drop(ev) {
 				ev.preventDefault();
 				var data = ev.dataTransfer.getData("text");
-				console.log(ev.target.id);
+				console.log('target ID: ' + ev.target.id);
+				console.log('target class: ' + ev.target.class);
 				if(ev.target.class != 'card' && ev.target.class != 'card-text'){
 					ev.target.appendChild(document.getElementById(data));
 				}
