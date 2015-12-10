@@ -39,7 +39,7 @@
 				}
 			}
 			
-			/*function setupDrag(){
+			function setupDrag(){
 				document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 				var cards = document.getElementsByClassName('card');
 				console.log(cards);
@@ -55,44 +55,11 @@
 						draggable.style.top = event.pageY-25 + 'px';
 					}, false);
 				}
-			}*/
-			
-			function touchHandler(event){
-				var touches = event.changedTouches,
-					first = touches[0],
-					type = "";
-				switch(event.type)
-				{
-					case "touchstart": type = "dragstart"; break;
-					case "touchmove":  type = "drag"; break;        
-					case "touchend":   type = "drop";   break;
-					default:           return;
-				}
-
-				// initMouseEvent(type, canBubble, cancelable, view, clickCount, 
-				//                screenX, screenY, clientX, clientY, ctrlKey, 
-				//                altKey, shiftKey, metaKey, button, relatedTarget);
-
-				var simulatedEvent = document.createEvent("MouseEvent");
-				simulatedEvent.initMouseEvent(type, true, true, window, 1, 
-											  first.screenX, first.screenY, 
-											  first.clientX, first.clientY, false, 
-											  false, false, false, 0/*left*/, null);
-
-				first.target.dispatchEvent(simulatedEvent);
-				event.preventDefault();
-			}
-
-			function init(){
-				document.getElementById('uxcard0').addEventListener("touchstart", touchHandler, true);
-				document.getElementById('uxcard0').addEventListener("touchmove", touchHandler, true);
-				document.getElementById('uxcard0').addEventListener("touchend", touchHandler, true);
-				document.getElementById('uxcard0').addEventListener("touchcancel", touchHandler, true);    
 			}
 		</script>
 	</head>
 	
-	<body onLoad='loadCards(); init();'>
+	<body onLoad='loadCards(); setupDrag();'>
 		<div id='card-container' class='left-container' align='center'>
 			Cards
 		</div>
