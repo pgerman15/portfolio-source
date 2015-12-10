@@ -31,7 +31,7 @@
 				ev.preventDefault();
 				var data = ev.dataTransfer.getData("text");
 				console.log(ev.target.id);
-				if(ev.target.class != 'card'){
+				if(ev.target.class != 'card' && ev.target.class != 'card-text'){
 					ev.target.appendChild(document.getElementById(data));
 				}
 			}
