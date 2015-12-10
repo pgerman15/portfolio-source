@@ -31,7 +31,9 @@
 				ev.preventDefault();
 				var data = ev.dataTransfer.getData("text");
 				console.log(ev.target);
-				ev.target.appendChild(document.getElementById(data));
+				if(ev.target.class != 'card'){
+					ev.target.appendChild(document.getElementById(data));
+				}
 			}
 		</script>
 	</head>
