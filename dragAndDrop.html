@@ -43,9 +43,9 @@
 				document.body.addEventListener('touchstart', function(e){ e.preventDefault(); });
 				var cards = document.getElementsByClassName('card');
 				console.log(cards);
-				
+				var draggable = '';
 				for(var i = 0; i < cards.length; i++){
-					var draggable = document.getElementById(cards[i].id);
+					draggable = document.getElementById(cards[i].id);
 					console.log('adding listener for ' + draggable.id);
 					draggable.addEventListener('touchmove', function(event) {
 						// Place element where the finger is
