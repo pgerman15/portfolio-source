@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="dependencies/dragDrop.css?1.5d">
-				<script>
+		
+		<!-- Card Load Script -->
+		<script>
 			function loadCards(){
 				var htmlSource = 'Cards';
 				var cards = ["Card 1", "Card 2", "Card 3"];
@@ -13,13 +15,31 @@
 				document.getElementById('card-container').innerHTML = htmlSource;
 			}
 		</script>
+		
+		<!-- Drag and Drop Script -->
+		<script>
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("text", ev.target.id);
+				document.getElementById(ev.target.id).style.visibility='hidden';
+			}
+
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+		</script>
 	</head>
 	
 	<body onLoad='loadCards()'>
 		<div id='card-container' class='left-container' align='center'>
 			Cards
 		</div>
-		<div id='group-container' align='center' class='right-container'>
+		<div id='group-container' align='center' class='right-container' ondrop="drop(event)" ondragover="allowDrop(event)">
 			Groups
 		</div>
 	</body>
