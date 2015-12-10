@@ -36,7 +36,7 @@
 					document.getElementById(data).style.width = '20%';
 					document.getElementById(data).style.position = 'absolute';
 					document.getElementById(data).style.left = (event.clientX - (document.getElementById(data).offsetWidth / 2)) + 'px';
-					document.getElementById(data).style.left = (event.clientY - (document.getElementById(data).offsetHeight / 2)) + 'px';
+					document.getElementById(data).style.top = (event.clientY - (document.getElementById(data).offsetHeight / 2)) + 'px';
 					ev.target.appendChild(document.getElementById(data));
 				}else{
 					console.log('cannot put a card inside another card');
