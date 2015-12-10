@@ -12,6 +12,7 @@
 	height: 8vh;
 	width: 80%;
 	vertical-align: middle;
+	position:absolute;
 }
 
 .card-text{
