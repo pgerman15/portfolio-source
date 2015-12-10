@@ -34,6 +34,8 @@
 				console.log('target class: ' + ev.target.class);
 				if(ev.target.id.indexOf('uxcard') == -1){
 					ev.target.appendChild(document.getElementById(data));
+				}else{
+					console.log('cannot put a card inside another card');
 				}
 			}
 		</script>
