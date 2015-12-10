@@ -10,7 +10,7 @@
 				var cards = ["Card 1", "Card 2", "Card 3"];
 				//alert("loading cards");
 				for(var i = 0; i < cards.length; i++){
-					htmlSource = htmlSource + '<div id="card' + i + '" class="card" align="center" draggable="true" ondragstart="drag(event)"><div class="card-text">' + cards[i] + '</div></div>';
+					htmlSource = htmlSource + '<div id="uxcard' + i + '" class="card" align="center" draggable="true" ondragstart="drag(event)"><div class="card-text">' + cards[i] + '</div></div>';
 				}
 				document.getElementById('card-container').innerHTML = htmlSource;
 			}
@@ -32,7 +32,7 @@
 				var data = ev.dataTransfer.getData("text");
 				console.log('target ID: ' + ev.target.id);
 				console.log('target class: ' + ev.target.class);
-				if(ev.target.class != 'card' && ev.target.class != 'card-text'){
+				if(ev.target.id.indexOf('uxcard' > -1)){
 					ev.target.appendChild(document.getElementById(data));
 				}
 			}
