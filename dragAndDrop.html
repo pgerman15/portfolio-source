@@ -33,7 +33,7 @@
 				console.log('target ID: ' + ev.target.id);
 				if(ev.target.id == 'group-container'){
 					document.getElementById(data).style.width = '20%';
-					document.getElementById(data).style.position = 'absolute';
+					//document.getElementById(data).style.position = 'absolute';
 					document.getElementById(data).style.left = event.clientX; + 'px';
 					document.getElementById(data).style.top = event.clientY + 'px';
 					ev.target.appendChild(document.getElementById(data));
