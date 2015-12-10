@@ -11,8 +11,9 @@
 	border-style: solid;
 	height: 50px;
 	width: 150px;
+	max-width: 80%;
 	vertical-align: middle;
-
+	position: absolute;
 }
 
 .card-text{
