@@ -24,6 +24,7 @@
 
 			function drag(ev) {
 				ev.dataTransfer.setData("text", ev.target.id);
+				console.log('source ID: ' + ev.target.id);
 			}
 
 			function drop(ev) {
