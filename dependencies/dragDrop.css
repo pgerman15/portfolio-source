@@ -3,6 +3,7 @@
 	border-style: solid;
 	height: 97vh;
 	width: 15%;
+	background-color: white;
 }
 
 .card{
@@ -21,9 +22,9 @@
 
 .right-container{
 	float: right;
-	border-style: solid;
+	font-size: 24px;
 	height: 97vh;
-	width: 82%;
+	width: 84%;
 }
 
 body{
