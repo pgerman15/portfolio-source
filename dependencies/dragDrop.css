@@ -25,3 +25,7 @@
 	height: 97vh;
 	width: 82%;
 }
+
+body{
+	background: url('/dependencies/pictures/Copy-of-graph-paper-background.gif');
+}
