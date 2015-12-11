@@ -13,6 +13,7 @@
 	height: 7vh;
 	width: 80%;
 	vertical-align: middle;
+	background: url('pictures/notecard.jpg');
 }
 
 .card-text{
