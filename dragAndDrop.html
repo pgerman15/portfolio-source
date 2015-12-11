@@ -26,6 +26,8 @@
 				var cardTop = 0;
 				var groupLeft = 0;
 				var groupTop = 0; 
+				cardLeft = card.offsetLeft + group.offsetLeft;
+				cardTop = card.offsetTop + group.offsetTop;
 			}
 			function allowDrop(ev) {
 				ev.preventDefault();
