@@ -16,6 +16,7 @@
 	background: url('pictures/smallNotecard.png');
 	background-size: contain;
 	font-family: 'Annie Use Your Telescope', serif;
+	font-size: 28px;
 }
 
 .card-text{
