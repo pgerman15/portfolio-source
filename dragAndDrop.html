@@ -37,6 +37,7 @@
 			function drag(ev) {
 				ev.dataTransfer.setData("text", ev.target.id);
 				console.log('source ID: ' + ev.target.id);
+				getCardPosition(ev.target.id, 'group-container');
 			}
 
 			function drop(ev) {
