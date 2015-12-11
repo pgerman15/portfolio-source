@@ -19,6 +19,11 @@
 		
 		<!-- Drag and Drop Script -->
 		<script>
+			function getCardPosition(var cardID, var groupID){
+				var card = document.getElementById(cardID);
+				var group = document.getElementById(groupID);
+				
+			}
 			function allowDrop(ev) {
 				ev.preventDefault();
 			}
@@ -39,6 +44,7 @@
 					document.getElementById(data).style.left = (event.clientX - (document.getElementById(data).offsetWidth / 2)) + 'px';
 					document.getElementById(data).style.top = (event.clientY - (document.getElementById(data).offsetHeight / 2)) + 'px';
 					ev.target.appendChild(document.getElementById(data));
+					
 				}else{
 					console.log('cannot put a card inside another card');
 				}
