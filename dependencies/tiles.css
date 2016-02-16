@@ -11,6 +11,9 @@
 .dummy {
     margin-top: 100%;
 }
+.full-width{
+	width: 100%;
+}
 
 #tile0{
 	background-color: #5856d6;
