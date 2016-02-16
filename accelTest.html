@@ -4,7 +4,7 @@
 	var ax = 0;
 		window.addEventListener('devicemotion', function (e) {
 			ax = e.accelerationIncludingGravity.x;
-			ay = -e.accelerationIncludingGravity.y * sensitivity;
+			ay = -e.accelerationIncludingGravity.y;
 			console.log(ax + ", " + ay);
 		}, false);
 	</script>
