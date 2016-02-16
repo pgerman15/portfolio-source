@@ -2,7 +2,7 @@
 <body>
 <div id="ax" style="color: blue"></div></br>
 <div id="ay" style="color: red"></div>
-<canvas id="myCanvas" style="width: 100%; height: 100%; border: 1px solid black;">Sorry, Canvas does work on your old, stanky browser(or phone)</canvas>
+<canvas id="myCanvas" style="width: 300px; height: 300px; border: 1px solid black;">Sorry, Canvas does work on your old, stanky browser(or phone)</canvas>
 	<script>
 	var x = 0;
 	var y = 0;
@@ -18,7 +18,7 @@
 			ay = -e.accelerationIncludingGravity.y;
 			document.getElementById("ax").innerHTML = ax;
 			document.getElementById("ay").innerHTML = ay;
-			of
+			if(ax > 2 )
 		}, false);
 	</script>
 </body>
