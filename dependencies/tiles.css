@@ -8,7 +8,7 @@
     padding-top:calc(50% - 30px) !important;
 	color: white;
 	margin-bottom:0 !important;
-	border-radius:0;
+	border-radius:0 !importants;
 	border:none;
 }
 .dummy {
