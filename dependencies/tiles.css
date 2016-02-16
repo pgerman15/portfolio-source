@@ -8,8 +8,8 @@
     padding-top:calc(50% - 30px) !important;
 	color: white;
 	margin-bottom:0 !important;
-	border-radius:0 !importants;
-	border:none;
+	border-radius:0 !important;
+	border:none !important;
 }
 .dummy {
     margin-top: 100%;
