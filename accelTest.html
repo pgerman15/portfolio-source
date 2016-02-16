@@ -5,6 +5,7 @@
 		window.addEventListener('devicemotion', function (e) {
 			ax = e.accelerationIncludingGravity.x * sensitivity;
 			ay = -e.accelerationIncludingGravity.y * sensitivity;
+			console.log(ax + ", " + ay);
 		}, false);
 	</script>
 	<body onload="alert(ax + ', ' + ay)"
