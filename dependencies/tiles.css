@@ -15,6 +15,12 @@
 	width: 100%;
 }
 
+#mainRow{
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 15px;
+}
+	
 #tile0{
 	background-color: #5856d6;
 }
