@@ -21,8 +21,8 @@
 }
 
 a:hover{
-	text-decoration: none;
-	color:grey;
+	text-decoration: none !important;
+	color:grey !important;
 }
 
 body{
