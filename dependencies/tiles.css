@@ -7,7 +7,7 @@
     text-align:center;
     padding-top:calc(50% - 30px) !important;
 	color: white;
-	padding-bottom:0;
+	padding-bottom:0 !important;
 }
 .dummy {
     margin-top: 100%;
