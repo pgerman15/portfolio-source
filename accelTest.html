@@ -21,11 +21,13 @@
 			if(ax > 2 && x < 299){
 				ctx.fillRect(x,y,25,25);
 				x = x + 1;
+				ctx.fillRect(x, y, 25, 25);
 			}else if(ax < -2 && x > 1){
 				ctx.fillRect(x,y,25,25);
 				x = x - 1;
+				ctx.fillRect(x, y, 25, 25);
 			}
-			ctx.fillRect(x, y, 25, 25);
+			
 		}, false);
 	</script>
 </body>
