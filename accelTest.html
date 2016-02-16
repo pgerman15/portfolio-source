@@ -22,11 +22,11 @@
 			document.getElementById("ax").innerHTML = ax;
 			document.getElementById("ay").innerHTML = ay;
 			if(ax > 2 && x < 299){
-				ctx.fillRect(x,y,25,25);
+				ctx.clearRect(x,y,25,25);
 				x = x + 1;
 				ctx.fillRect(x, y, 25, 25);
 			}else if(ax < -2 && x > 1){
-				ctx.fillRect(x,y,25,25);
+				ctx.clearRect(x,y,25,25);
 				x = x - 1;
 				ctx.fillRect(x, y, 25, 25);
 			}
