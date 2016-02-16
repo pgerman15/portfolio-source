@@ -11,9 +11,11 @@
 	border-radius:0 !important;
 	border:none !important;
 }
+
 .dummy {
     margin-top: 100%;
 }
+
 .full-width{
 	width: 100%;
 }
@@ -21,6 +23,10 @@
 a:hover{
 	text-decoration: none;
 	color:grey;
+}
+
+body{
+	background-color: grey;
 }
 
 #mainRow{
