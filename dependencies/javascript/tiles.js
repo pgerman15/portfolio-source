@@ -6,7 +6,9 @@ $(document).ready(function(){
 		count += 1;
 	});
 	
-	$('modalForm')
+	$('modalForm').submit(function(event){
+		event.preventDefault();
+	});
 });
 
 function createTile(tileLabel){
