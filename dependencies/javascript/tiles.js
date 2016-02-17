@@ -8,6 +8,10 @@ $(document).ready(function(){
 	
 	$('modalForm').submit(function(event){
 		event.preventDefault();
+		var y = Math.floor(Math.random() * 10);
+		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a id="tile' + x + '" class="thumbnail">' + $('#tileText').val() + '</a></div>');
+		$('#mainRow').append($tile);
+		count += 1;
 	});
 });
 
