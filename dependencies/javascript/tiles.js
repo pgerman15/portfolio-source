@@ -5,6 +5,8 @@ $(document).ready(function(){
 		$('#mainRow').append($tile);
 		count += 1;
 	});
+	
+	$('modalForm')
 });
 
 function createTile(tileLabel){
