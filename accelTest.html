@@ -22,13 +22,13 @@
 			document.getElementById("ax").innerHTML = ax;
 			document.getElementById("ay").innerHTML = ay;
 
-			if(ax > 2 && x < 299){
+			if(ax > 2 && x < 300 - Math.floor(ax)){
 				ctx.clearRect(x,y,25,25);
-				x = x + 1;
+				x = x + Math.floor(ax);
 				ctx.fillRect(x, y, 25, 25);
 			}else if(ax < -2 && x > 1){
 				ctx.clearRect(x,y,25,25);
-				x = x - 1;
+				x = x - Math.floor(ax);
 				ctx.fillRect(x, y, 25, 25);
 			}
 			
