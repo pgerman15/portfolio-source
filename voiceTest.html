@@ -11,7 +11,7 @@ recognizer.onresult = function(event) {
     }  
 };
 recognizer.start();
-
+$.ajax({ url: 'your-url', success: function(data) { alert(data); } });
 var su = new SpeechSynthesisUtterance();
 su.lang = "en";
 su.text = "Hello World";
