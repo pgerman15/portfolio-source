@@ -11,5 +11,10 @@ recognizer.onresult = function(event) {
     }  
 };
 recognizer.start();
+
+var su = new SpeechSynthesisUtterance();
+su.lang = "en";
+su.text = "Hello World";
+speechSynthesis.speak(su);
 </script>
 </html>
