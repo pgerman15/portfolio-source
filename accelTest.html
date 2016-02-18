@@ -17,8 +17,14 @@
 		window.addEventListener('devicemotion', function (e) {
 			ax = e.accelerationIncludingGravity.x;
 			ay = -e.accelerationIncludingGravity.y;
+			x = event.accelerationIncludingGravity.x; 
+			y = event.accelerationIncludingGravity.y; 
+			z = event.accelerationIncludingGravity.z; 
 			document.getElementById("ax").innerHTML = ax;
 			document.getElementById("ay").innerHTML = ay;
+			document.getElementById("x").innerHTML = x;
+			document.getElementById("y").innerHTML = y;
+			document.getElementById("z").innerHTML = z;
 
 			/*if(ax > 1 && x < 301 - Math.floor(ax)){
 				ctx.clearRect(x,y,25,25);
