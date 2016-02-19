@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});
 	
 	$.get( "https://www.googleapis.com/youtube/v3/search?part=snippet&q=cats&key=AIzaSyDyk41ENXaIZ7uaM9YhXA7qN6afNDoSkBc&maxResults=10" ).then(
-	  function() {
+	  function(data) {
 		alert( "$.get succeeded" );
 	  }, function() {
 		alert( "$.get failed!" );
