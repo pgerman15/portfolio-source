@@ -18,7 +18,7 @@ $(document).ready(function(){
 	
 	$.get( "https://www.googleapis.com/youtube/v3/search?part=snippet&q=cats&key=AIzaSyDyk41ENXaIZ7uaM9YhXA7qN6afNDoSkBc&maxResults=10" ).then(
 	  function(data) {
-		alert( "$.get succeeded with data: " + JSON.stringify(data.toString) );
+		alert( "$.get succeeded with data: " + JSON.stringify(data));
 	  }, function() {
 		alert( "$.get failed!" );
 	  }
