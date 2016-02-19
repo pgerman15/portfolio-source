@@ -15,4 +15,12 @@ $(document).ready(function(){
 		return false;    //<---- Add this line
 	  }
 	});
+	
+	$.get( "test.php" ).then(
+	  function() {
+		alert( "$.get succeeded" );
+	  }, function() {
+		alert( "$.get failed!" );
+	  }
+	);
 });
