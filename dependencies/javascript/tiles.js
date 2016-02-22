@@ -15,7 +15,7 @@ $(document).ready(function(){
 		return false;    //<---- Add this line
 	  }
 	});
-	
+	//substring() and substr() are NOT interchangable
 	$('#search').keypress(function (e) {
 	  if (e.which == 13) {
 		$.get( "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + $('#search').val() + "&key=AIzaSyDyk41ENXaIZ7uaM9YhXA7qN6afNDoSkBc&maxResults=10" ).then(
