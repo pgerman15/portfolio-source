@@ -23,11 +23,11 @@ $(document).ready(function(){
 			alert( "$.get succeeded with data: " + JSON.stringify(data));
 			var counter = 0;
 			while(data.indexOf('videoId') > -1){
-				document.getElementById('vid' + $scope.counter).innerHTML = ($scope.resp.substring($scope.resp.indexOf('\"title\"') + 9, $scope.resp.indexOf('thumbnails') - 3)) + 
-				"<button id='button" + $scope.counter + "' onclick='document.getElementById(\"player\").src = \"" + $scope.urlPrefix + ($scope.resp.substr($scope.resp.indexOf('videoId') + 10, 11)) + 
+				document.getElementById('vid' + $scope.counter).innerHTML = (data.substring(data.indexOf('\"title\"') + 9, data.indexOf('thumbnails') - 3)) + 
+				"<button id='button" + counter + "' onclick='document.getElementById(\"player\").src = \"" + $scope.urlPrefix + (data.substr($scope.resp.indexOf('videoId') + 10, 11)) + 
 				$scope.urlSuffix + "\"'>Add</button>";
-				$scope.resp = $scope.resp.substring($scope.resp.indexOf('thumbnails') + 13);
-				$scope.counter += 1;
+				data = data.substring(data.indexOf('thumbnails') + 13);
+				counter += 1;
 			}
 						
 		  }, function() {
