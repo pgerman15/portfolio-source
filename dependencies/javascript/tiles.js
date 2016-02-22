@@ -21,6 +21,15 @@ $(document).ready(function(){
 		$.get( "https://www.googleapis.com/youtube/v3/search?part=snippet&q=cats&key=AIzaSyDyk41ENXaIZ7uaM9YhXA7qN6afNDoSkBc&maxResults=10" ).then(
 		  function(data) {
 			alert( "$.get succeeded with data: " + JSON.stringify(data));
+			
+			while($scope.resp.indexOf('videoId') > -1){
+				document.getElementById('vid' + $scope.counter).innerHTML = ($scope.resp.substring($scope.resp.indexOf('\"title\"') + 9, $scope.resp.indexOf('thumbnails') - 3)) + 
+				"<button id='button" + $scope.counter + "' onclick='document.getElementById(\"player\").src = \"" + $scope.urlPrefix + ($scope.resp.substr($scope.resp.indexOf('videoId') + 10, 11)) + 
+				$scope.urlSuffix + "\"'>Add</button>";
+				$scope.resp = $scope.resp.substring($scope.resp.indexOf('thumbnails') + 13);
+				$scope.counter += 1;
+			}
+						
 		  }, function() {
 			alert( "$.get failed!" );
 		  }
