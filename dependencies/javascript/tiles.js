@@ -24,7 +24,7 @@ $(document).ready(function(){
 			var counter = 0;
 			while(data.indexOf('videoId') > -1){
 				document.getElementById('vid' + counter).innerHTML = (data.substring(data.indexOf('\"title\"') + 9, data.indexOf('thumbnails') - 3)) + 
-				"<button id='button" + counter + "' onclick='document.getElementById(\"player\").src = \"" + $scope.urlPrefix + (data.substr($scope.resp.indexOf('videoId') + 10, 11)) + 
+				"<button id='button" + counter + "' onclick='document.getElementById(\"player\").src = \"http://www.youtube.com/embed/" + (data.substr($scope.resp.indexOf('videoId') + 10, 11)) + 
 				$scope.urlSuffix + "\"'>Add</button>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
