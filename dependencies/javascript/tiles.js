@@ -21,6 +21,7 @@ $(document).ready(function(){
 		$.get( "https://www.googleapis.com/youtube/v3/search?part=snippet&q=cats&key=AIzaSyDyk41ENXaIZ7uaM9YhXA7qN6afNDoSkBc&maxResults=10" ).then(
 		  function(data) {
 			alert( "$.get succeeded with data: " + JSON.stringify(data));
+			data = JSON.stringify(data);
 			var counter = 0;
 			while(data.indexOf('videoId') > -1){
 				document.getElementById('vid' + counter).innerHTML = (data.substring(data.indexOf('\"title\"') + 9, data.indexOf('thumbnails') - 3)) + 
