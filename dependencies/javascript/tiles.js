@@ -29,8 +29,7 @@ $(document).ready(function(){
 				"?enablejsapi=1&origin=http://example.com" + "\"'>Add</button>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
-			}
-						
+			}			
 		  }, function() {
 			alert( "$.get failed!" );
 		  }
