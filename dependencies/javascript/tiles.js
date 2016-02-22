@@ -24,7 +24,7 @@ $(document).ready(function(){
 			data = JSON.stringify(data);
 			var counter = 0;
 			while(data.indexOf('videoId') > -1){
-				document.getElementById('vid' + counter).innerHTML = (data.substring(data.indexOf('\"title\"') + 9, data.indexOf('thumbnails') - 3)) + 
+				document.getElementById('vid' + counter).innerHTML = data.substring(data.indexOf('\"title\"') + 9, data.indexOf('thumbnails') - 3).substring(0, 25) + 
 				"<button id='button" + counter + "' onclick='document.getElementById(\"player\").src = \"http://www.youtube.com/embed/" + (data.substr(data.indexOf('videoId') + 10, 11)) + 
 				"?enablejsapi=1&origin=http://example.com" + "\"'>Add</button>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
