@@ -37,7 +37,11 @@ body{
 	margin-right: 0;
 	padding-right: 15px;
 }
-	
+
+#modal-form{
+	height: 50%;
+}
+
 #tile0{
 	background-color: #5856d6;
 }
