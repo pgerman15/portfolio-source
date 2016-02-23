@@ -43,6 +43,10 @@ button{
 	font-size: 16px !important;
 }
 
+#searchButton{
+	font-size: 16px;
+}
+
 #mainRow{
 	margin-left: 0;
 	margin-right: 0;
