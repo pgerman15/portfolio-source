@@ -31,6 +31,10 @@ body{
 	background-color: #6D6D6D !important;
 	color: white;
 }
+
+button{
+	font-size: 16px;
+}
 #tileText{
 	font-size: 16px !important;
 }
