@@ -33,7 +33,7 @@ body{
 }
 
 button{
-	font-size: 16px;
+	font-size: 16px !important;
 }
 #tileText{
 	font-size: 16px !important;
