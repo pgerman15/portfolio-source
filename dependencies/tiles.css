@@ -30,7 +30,6 @@ a:hover{
 body{
 	background-color: #6D6D6D !important;
 	color: white;
-	-webkit-text-size-adjust: none;
 }
 
 #mainRow{
@@ -40,12 +39,12 @@ body{
 }
 
 #modalForm{
-	height: 100%;
+	height: 50%;
 }
 
 #results{
-	height: 100%;
-	overflow-y: auto;
+	height: 50%;
+
 }
 
 #tile0{
