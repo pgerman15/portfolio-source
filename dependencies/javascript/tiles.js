@@ -17,6 +17,7 @@ $(document).ready(function(){
       //    after the API code downloads.
       var player;
       function onYouTubeIframeAPIReady() {
+		 console.log("api ready");
         player = new YT.Player('player', {
           height: '200',
           width: '200',
