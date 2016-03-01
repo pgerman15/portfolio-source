@@ -74,8 +74,8 @@ $(document).ready(function(){
 				if(title.length > 15){
 					shortTitle = title.substr(0, 15) + "...";
 				}
-				document.getElementById('vid' + counter).innerHTML =  "<span title='" + title + "'>" + shortTitle + "</span><button id='button" + counter + 
-				"' onclick=\"player.cueVideoById('" + data.substr(data.indexOf('videoId') + 10, 11) + "'); player.playVideo();\">Add</button>";
+				document.getElementById('vid' + counter).innerHTML =  "<span title='" + title + "'>" + shortTitle + "</span><i id='button" + counter + 
+				"' onclick=\"saveId('" + data.substr(data.indexOf('videoId') + 10, 11) + "')\"></i>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
 			}			
