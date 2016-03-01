@@ -5,6 +5,7 @@ $(document).ready(function(){
 		$('#mainRow').append($tile);
 	});
 	alert('load player');
+	console.log("LOADING PLAYER");
 	 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
