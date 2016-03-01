@@ -87,6 +87,8 @@ $(document).ready(function(){
 		return false;    //<---- Add this line
 	  }
 	});
-	
-	
 });
+
+function saveId(id){
+	$('#myModal').data('videoId', id);
+}
