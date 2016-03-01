@@ -74,7 +74,7 @@ $(document).ready(function(){
 				if(title.length > 15){
 					shortTitle = title.substr(0, 15) + "...";
 				}
-				document.getElementById('vid' + counter).innerHTML =  "<span title='" + title + "'>" + shortTitle + "</span><i id='button" + counter + 
+				document.getElementById('vid' + counter).innerHTML =  "<span title='" + title + "'>" + shortTitle + "</span><i class='fa-save fa-2x fa' id='button" + counter + 
 				"' onclick=\"saveId('" + data.substr(data.indexOf('videoId') + 10, 11) + "')\"></i>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
