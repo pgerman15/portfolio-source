@@ -30,6 +30,7 @@ $(document).ready(function(){
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
+		console.log('player ready');
         event.target.playVideo();
       }
 
