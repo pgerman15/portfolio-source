@@ -90,5 +90,5 @@ $(document).ready(function(){
 });
 
 function saveId(id){
-	$('#myModal').data('videoId', id);
+	$('#myModal').data('video-id', id);
 }
