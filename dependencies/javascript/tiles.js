@@ -1,10 +1,4 @@
-$(document).ready(function(){
-	$('#newTileButton').click(function(){
-		var x = Math.floor(Math.random() * 10);
-		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a id="tile' + x + '" class="thumbnail">' + $('#tileText').val() + '</a></div>');
-		$('#mainRow').append($tile);
-	});
-	//alert('load player');
+//alert('load player');
 	console.log("LOADING PLAYER");
 	 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -49,6 +43,14 @@ $(document).ready(function(){
         player.stopVideo();
       }
 
+
+$(document).ready(function(){
+	$('#newTileButton').click(function(){
+		var x = Math.floor(Math.random() * 10);
+		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a id="tile' + x + '" class="thumbnail">' + $('#tileText').val() + '</a></div>');
+		$('#mainRow').append($tile);
+	});
+	
 	$('#tileText').keypress(function (e) {
 	  if (e.which == 13) {
 		var x = Math.floor(Math.random() * 10);
