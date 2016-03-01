@@ -75,7 +75,7 @@ $(document).ready(function(){
 					shortTitle = title.substr(0, 15) + "...";
 				}
 				document.getElementById('vid' + counter).innerHTML =  "<span title='" + title + "'>" + shortTitle + "</span><i class='fa-save fa-2x fa' id='button" + counter + 
-				"' onclick=\"saveId('" + data.substr(data.indexOf('videoId') + 10, 11) + "')\"></i><i class='fa-play-circle-o fa fa-2x'";
+				"' onclick=\"saveId('" + data.substr(data.indexOf('videoId') + 10, 11) + "')\"></i><i class='fa-play-circle-o fa fa-2x'></i>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
 			}			
