@@ -75,7 +75,7 @@ $(document).ready(function(){
 					shortTitle = title.substr(0, 15) + "...";
 				}
 				document.getElementById('vid' + counter).innerHTML =  "<span title='" + title + "'>" + shortTitle + "</span><button id='button" + counter + 
-				"' onclick=\"player.cueVideoById('" + data.substr(data.indexOf('videoId') + 10, 11) + "');\">Add</button>";
+				"' onclick=\"player.cueVideoById('" + data.substr(data.indexOf('videoId') + 10, 11) + "'); player.playVideo();\">Add</button>";
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
 			}			
