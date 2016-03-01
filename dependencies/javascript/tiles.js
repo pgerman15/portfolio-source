@@ -26,7 +26,7 @@ $(document).ready(function(){
 			while(data.indexOf('videoId') > -1){
 				var title = data.substring(data.indexOf('\"title\"') + 9, data.indexOf('thumbnails') - 3);
 				if(title.length > 15){
-					title = title.substr(0, 15);
+					title = title.substr(0, 15) + "...";
 				}
 				document.getElementById('vid' + counter).innerHTML =  title + "<button id='button" + counter + "' onclick='document.getElementById(\"player\").src = \"http://www.youtube.com/embed/" + data.substr(data.indexOf('videoId') + 10, 11) + 
 				"?enablejsapi=1&origin=http://example.com" + "\"'>Add</button>";
