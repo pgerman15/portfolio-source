@@ -79,6 +79,7 @@ $(document).ready(function(){
 				data = data.substring(data.indexOf('thumbnails') + 13);
 				counter += 1;
 			}			
+			//"' onclick=\"player.cueVideoById('" + data.substr(data.indexOf('videoId') + 10, 11) + "'); player.playVideo();\">Add</button>"
 		  }, function() {
 			alert( "$.get failed!" );
 		  }
