@@ -1,38 +1,38 @@
 <html>
-<script type="text/javascript">
-var canvas;
-var ctx; 
-var x;
-var y;
-var mouseIsDown;
+	<head>
+		<script type="text/javascript">
+		var canvas;
+		var ctx; 
+		var x;
+		var y;
+		var mouseIsDown;
 
-function init() {
-    canvas = document.getElementById('mainCanvas');
-    ctx = canvas.getContext("2d");
-	mouseIsDown = false;
-    w = canvas.width;
-    h = canvas.height;
+		function init() {
+			canvas = document.getElementById('mainCanvas');
+			ctx = canvas.getContext("2d");
+			mouseIsDown = false;
+			w = canvas.width;
+			h = canvas.height;
 
-    canvas.addEventListener("mousemove", function (e) {
-        if(mouseIsDown){
-			ctx.fillRect(e.pageX, e.pageY, 4, 4);
+			canvas.addEventListener("mousemove", function (e) {
+				if(mouseIsDown){
+					ctx.fillRect(e.pageX, e.pageY, 4, 4);
+				}
+			}, false);
+			canvas.addEventListener("mousedown", function (e) {
+				mouseIsDown = true;
+				ctx.fillRect(e.pageX, e.pageY, 4, 4);
+			}, false);
+			canvas.addEventListener("mouseup", function (e) {
+				mouseIsDown = false;
+			}, false);
+			canvas.addEventListener("mouseout", function (e) {
+				//findxy('out', e)
+			}, false);
 		}
-    }, false);
-    canvas.addEventListener("mousedown", function (e) {
-		mouseIsDown = true;
-        ctx.fillRect(e.pageX, e.pageY, 4, 4);
-    }, false);
-    canvas.addEventListener("mouseup", function (e) {
-        mouseIsDown = false;
-    }, false);
-    canvas.addEventListener("mouseout", function (e) {
-        //findxy('out', e)
-    }, false);
-}
-
-
-</script>
+		</script>
+	</head>
 <body onload="init()">
-    <canvas id="mainCanvas" width="100%" height="100%"></canvas>
+    <canvas id="mainCanvas"></canvas>
 </body>
 </html>
