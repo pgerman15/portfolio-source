@@ -39,7 +39,6 @@
 			}, false);
 			canvas.addEventListener("touchstart", function (e) {
 				mouseIsDown = true;
-				e.preventDefault();
 				ctx.fillRect(e.pageX, e.pageY, 4, 4);
 			}, false);
 			canvas.addEventListener("touchend", function (e) {
