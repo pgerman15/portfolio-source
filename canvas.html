@@ -15,12 +15,12 @@ function init() {
 
     canvas.addEventListener("mousemove", function (e) {
         if(mouseIsDown){
-			ctx.fillRect(e.pageX, e.pageY, 1, 1);
+			ctx.fillRect(e.pageX, e.pageY, 4, 4);
 		}
     }, false);
     canvas.addEventListener("mousedown", function (e) {
 		mouseIsDown = true;
-        ctx.fillRect(e.pageX, e.pageY, 1, 1);
+        ctx.fillRect(e.pageX, e.pageY, 4, 4);
     }, false);
     canvas.addEventListener("mouseup", function (e) {
         mouseIsDown = false;
