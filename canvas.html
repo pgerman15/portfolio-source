@@ -14,7 +14,7 @@
 			mouseIsDown = false;
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
-			window.blockMenuHeaderScroll = true;
+			
 			canvas.addEventListener("mousemove", function (e) {
 				if(mouseIsDown){
 					ctx.fillRect(e.clientX, e.clientY, 4, 4);
