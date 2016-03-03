@@ -35,7 +35,7 @@
 			e.preventDefault();
 				alert("mouse is down: " + mouseIsDown);
 				if(mouseIsDown){
-					ctx.fillRect(e.clientX, e.clientY, 4, 4);
+					ctx.fillRect(e.pageX, e.pageY, 4, 4);
 				}
 			}, false);
 			canvas.addEventListener("touchstart", function (e) {
