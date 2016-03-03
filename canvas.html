@@ -30,6 +30,22 @@
 			canvas.addEventListener("mouseout", function (e) {
 				//findxy('out', e)
 			}, false);
+			
+			canvas.addEventListener("touchmove", function (e) {
+				if(mouseIsDown){
+					ctx.fillRect(e.clientX, e.clientY, 4, 4);
+				}
+			}, false);
+			canvas.addEventListener("touchstart", function (e) {
+				mouseIsDown = true;
+				ctx.fillRect(e.pageX, e.pageY, 4, 4);
+			}, false);
+			canvas.addEventListener("touchend", function (e) {
+				mouseIsDown = false;
+			}, false);
+			canvas.addEventListener("touchcancel", function (e) {
+				//findxy('out', e)
+			}, false);
 		}
 		</script>
 	</head>
