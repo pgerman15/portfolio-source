@@ -12,8 +12,8 @@
 			canvas = document.getElementById('mainCanvas');
 			ctx = canvas.getContext("2d");
 			mouseIsDown = false;
-			w = canvas.width;
-			h = canvas.height;
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
 
 			canvas.addEventListener("mousemove", function (e) {
 				if(mouseIsDown){
