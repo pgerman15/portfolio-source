@@ -14,16 +14,19 @@ function init() {
     h = canvas.height;
 
     canvas.addEventListener("mousemove", function (e) {
-        findxy('move', e)
+        if(mouseIsDown){
+			ctx.fillRect(e.pageX, e.pageY, 1, 1);
+		}
     }, false);
     canvas.addEventListener("mousedown", function (e) {
+		mouseIsDown = true;
         ctx.fillRect(e.pageX, e.pageY, 1, 1);
     }, false);
     canvas.addEventListener("mouseup", function (e) {
-        findxy('up', e)
+        mouseIsDown = false;
     }, false);
     canvas.addEventListener("mouseout", function (e) {
-        findxy('out', e)
+        //findxy('out', e)
     }, false);
 }
 
