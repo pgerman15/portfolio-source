@@ -2,10 +2,6 @@
 <script type="text/javascript">
 var canvas;
 var ctx; 
-var lx;
-var ly;
-var cx;
-var cy
 var x;
 var y;
 var mouseIsDown;
@@ -21,7 +17,7 @@ function init() {
         findxy('move', e)
     }, false);
     canvas.addEventListener("mousedown", function (e) {
-        findxy('down', e)
+        ctx.fillRect(e.pageX, e.pageY, 1, 1);
     }, false);
     canvas.addEventListener("mouseup", function (e) {
         findxy('up', e)
