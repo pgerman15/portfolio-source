@@ -33,6 +33,7 @@
 			
 			canvas.addEventListener("touchmove", function (e) {
 			e.preventDefault();
+				alert("touchmove");
 				if(mouseIsDown){
 					ctx.fillRect(e.clientX, e.clientY, 4, 4);
 				}
