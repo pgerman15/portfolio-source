@@ -1,14 +1,11 @@
 <html>
 <script type="text/javascript">
-var canvas, ctx, flag = false,
-    prevX = 0,
-    currX = 0,
-    prevY = 0,
-    currY = 0,
-    dot_flag = false;
+var canvas, ctx, 
+var lx;
+var ly;
+var cx;
+var cy
 
-var x = "black",
-    y = 2;
 
 function init() {
     canvas = document.getElementById('can');
@@ -116,6 +113,6 @@ function findxy(res, e) {
 }
 </script>
 <body onload="init()">
-    <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
+    <canvas id="mainCanvas" width="100%" height="100%"></canvas>
 </body>
 </html>
