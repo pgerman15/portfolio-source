@@ -8,11 +8,12 @@ var cx;
 var cy
 var x;
 var y;
-var mouseIsDown = false;
+var mouseIsDown;
 
 function init() {
     canvas = document.getElementById('mainCanvas');
     ctx = canvas.getContext("2d");
+	mouseIsDown = false;
     w = canvas.width;
     h = canvas.height;
 
