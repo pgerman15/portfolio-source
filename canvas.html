@@ -16,8 +16,8 @@
 			ctx = canvas.getContext("2d");
 			mouseIsDown = false;
 			var img = document.getElementById("scream");
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
+			canvas.width = window.innerWidth / 2;
+			canvas.height = window.innerHeight / 2;
 			console.log(img);
 			ctx.drawImage(img, 40, 40);
 			ctx.fillRect(40, 40, 10, 10);
