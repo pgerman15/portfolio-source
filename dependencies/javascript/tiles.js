@@ -50,6 +50,7 @@ $(document).ready(function(){
 		var x = Math.floor(Math.random() * 10);
 		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + tileCounter + '\')" id="tile' + tileCounter + '" class="thumbnail" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
 		$('#mainRow').append($tile);
+		tileCounter++;
 	});
 	
 	$('#tileText').keypress(function (e) {
@@ -57,6 +58,7 @@ $(document).ready(function(){
 		var x = Math.floor(Math.random() * 10);
 		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + tileCounter + '\')" id="tile' + tileCounter + '" class="thumbnail" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
 		$('#mainRow').append($tile);
+		tileCounter++;
 		$('#myModal').modal('hide');
 		return false;    //<---- Add this line
 	  }
