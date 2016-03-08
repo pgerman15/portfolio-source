@@ -63,21 +63,21 @@ button{
 }
 
 .tile-color-0{
-	background-color: #A4C400;
+	background-color: #A4C400 !important;
 }
 .tile-color-5{
-	background-color: #60A917;
+	background-color: #60A917 !important;
 }
 .tile-color-1{
-	background-color: #008A00;
+	background-color: #008A00 !important;
 }
 .tile-color-6{
-	background-color: #00ABA9;
+	background-color: #00ABA9 !important;
 }
 .tile-color-2{
 	background-color: #1BA1E2;
 }
-.tile-color-7{
+ -color-7{
 	background-color: #0050EF;
 }
 .tile-color-3{
