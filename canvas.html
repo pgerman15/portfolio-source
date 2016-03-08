@@ -16,9 +16,9 @@
 			ctx = canvas.getContext("2d");
 			mouseIsDown = false;
 			var img = document.getElementById("scream");
-			ctx.drawImage(img, 10, 10);
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
+			ctx.drawImage(img, 10, 10);
 			
 			canvas.addEventListener("mousemove", function (e) {
 				if(mouseIsDown){
