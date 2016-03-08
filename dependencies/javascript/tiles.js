@@ -48,7 +48,6 @@
 $(document).ready(function(){
 	$('#newTileButton').click(function(){
 		var x = Math.floor(Math.random() * 10);
-		console.log(tileCounter + ', ' + x);
 		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + tileCounter + '\')" id="tile' + tileCounter + '" class="thumbnail tile-color-' + x + '" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
 		$('#mainRow').append($tile);
 		tileCounter++;
