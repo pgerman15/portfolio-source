@@ -7,13 +7,12 @@
     <canvas id="mainCanvas"></canvas>
 </body>
 		<script type="text/javascript">
+		window.onload(function(){
 		var canvas;
 		var ctx; 
 		var x;
 		var y;
 		var mouseIsDown;
-
-		function init() {
 			canvas = document.getElementById('mainCanvas');
 			ctx = canvas.getContext("2d");
 			mouseIsDown = false;
@@ -55,6 +54,6 @@
 			canvas.addEventListener("touchcancel", function (e) {
 				//findxy('out', e)
 			}, false);
-		}
+		});
 		</script>
 </html>
