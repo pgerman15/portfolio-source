@@ -1,4 +1,5 @@
 //alert('load player');
+	var tileCounter = 0;
 	console.log("LOADING PLAYER");
 	 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -47,14 +48,14 @@
 $(document).ready(function(){
 	$('#newTileButton').click(function(){
 		var x = Math.floor(Math.random() * 10);
-		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + x + '\')" id="tile' + x + '" class="thumbnail" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
+		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + tileCounter + '\')" id="tile' + tileCounter + '" class="thumbnail" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
 		$('#mainRow').append($tile);
 	});
 	
 	$('#tileText').keypress(function (e) {
 	  if (e.which == 13) {
 		var x = Math.floor(Math.random() * 10);
-		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + x + '\')" id="tile' + x + '" class="thumbnail" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
+		$tile = $('<div class="col-xs-6 col-sm-3 col-lg-2"><div class="dummy"></div><a onclick="changeVideo(\'#tile' + tileCounter + '\')" id="tile' + tileCounter + '" class="thumbnail" data-video-id="' + $('#myModal').data('video-id') + '">' + $('#tileText').val() + '</a></div>');
 		$('#mainRow').append($tile);
 		$('#myModal').modal('hide');
 		return false;    //<---- Add this line
