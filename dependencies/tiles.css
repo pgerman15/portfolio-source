@@ -62,54 +62,54 @@ button{
 	font-size: 16px;
 }
 
-#tile0{
+.tile0{
 	background-color: #A4C400;
 }
-#tile5{
+.tile5{
 	background-color: #60A917;
 }
-#tile1{
+.tile1{
 	background-color: #008A00;
 }
-#tile6{
+.tile6{
 	background-color: #00ABA9;
 }
-#tile2{
+.tile2{
 	background-color: #1BA1E2;
 }
-#tile7{
+.tile7{
 	background-color: #0050EF;
 }
-#tile3{
+.tile3{
 	background-color: #6A00FF;
 }
-#tile8{
+.tile8{
 	background-color: #AA00FF;
 }
-#tile4{
+.tile4{
 	background-color: #F472D0;
 }
-#tile9{
+.tile9{
 	background-color: #D80073;
 }
-#tile10{
+.tile10{
 	background-color: #A20025;
 }
-#tile11{
+.tile11{
 	background-color: #E51400;
 }
-#tile12{
+.tile12{
 	background-color: #FA6800;
 }
-#tile13{
+.tile13{
 	background-color: #F0A30A;
 }
-#tile14{
+.tile14{
 	background-color: #E3C800;
 }
-#tile15{
+.tile15{
 	background-color: #825A2C;
 }
-#tile16{
+.tile16{
 	background-color: #6D8764;
 }
