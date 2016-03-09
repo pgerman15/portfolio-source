@@ -9,15 +9,15 @@
 		background-color:green;
 	}   
 
-	.toolbar:hover{
+	.toolbar: hover{
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 25px;
+		width: 100px;
 		height: 100%;
 		overflow:hidden;
-		background-color:blue;
-	}   
+		background-color: blue;
+	}  	
 }
 
 
