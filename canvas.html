@@ -22,7 +22,10 @@
 			if(window.innerWidth > 480){
 				canvas.width = window.innerWidth * 0.75;
 				canvas.height = window.innerHeight;
-			}			
+			}else{
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}		
 			console.log(img);
 			ctx.drawImage(img, 40, 40);
 			ctx.fillRect(40, 40, 10, 10);
