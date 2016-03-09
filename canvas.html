@@ -65,6 +65,7 @@
 			document.getElementById('tools').addEventListener("click", function(e){
 				var toolbar = document.getElementById('tools');
 				if(toolbar.style.width == "100px"){
+					console.log("shrinking");
 					toolbar.style.width="25px;";
 				}else{
 					console.log("width was " + toolbar.style.width);
