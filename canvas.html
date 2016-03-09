@@ -20,8 +20,8 @@
 			mouseIsDown = false;
 			var img = document.getElementById("sourceImage");
 			if(window.innerWidth > 480){
-				canvas.width = window.innerWidth / 2;
-				canvas.height = window.innerHeight / 2;
+				canvas.width = window.innerWidth * 0.75;
+				canvas.height = window.innerHeight * 0.75;
 			}			
 			console.log(img);
 			ctx.drawImage(img, 40, 40);
