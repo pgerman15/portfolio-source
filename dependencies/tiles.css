@@ -37,10 +37,12 @@ button{
 }
 #tileText{
 	font-size: 16px !important;
+	color: white;
 }
 
 #search{
 	font-size: 16px !important;
+	color: white;
 }
 
 #searchButton{
