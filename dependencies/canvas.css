@@ -9,15 +9,6 @@
 		background-color:green;
 	}   
 
-	.toolbar:hover{
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100px;
-		height: 100%;
-		overflow:hidden;
-		background-color: blue;
-	}  	
 }
 
 
