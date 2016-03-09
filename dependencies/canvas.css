@@ -3,7 +3,8 @@
 }
 
 .toolbar{
-	width: 50%;
-	height: 90%;
-	background-color:green;
+	width: 49%;
+    height: 100%;
+	float: right;
+    background-color: green;
 }   
