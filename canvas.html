@@ -74,5 +74,19 @@
 					}
 				}
 			}, false);
+			
+			document.getElementById('tools').addEventListener("touchend", function(e){
+				if(window.innerWidth <= 480){
+					var toolbar = document.getElementById('tools');
+					if(toolbar.style.width == "100px"){
+						console.log("shrinking");
+						toolbar.style.width="25px";
+					}else{
+						console.log("width was " + toolbar.style.width);
+						toolbar.style.width="100px";
+					}
+				}
+			}, false);
+			
 		</script>
 </html>
