@@ -63,7 +63,12 @@
 			}, false);
 			
 			document.getElementById('tools').addEventListener("click", function(e){
-				document.getElementById('tools').style.width="100px";
+				var toolbar = document.getElementById('tools');
+				if(toolbar.style.width == "100px"){
+					toolbar.style.width = "25px;";
+				}else{
+					toolbar.style.width="100px";
+				}
 			}, false);
 		</script>
 </html>
