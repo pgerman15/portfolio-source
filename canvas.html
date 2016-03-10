@@ -80,7 +80,9 @@
 			}
 			
 			function drawImage(){
+				console.log("setting image");
 				img = document.getElementById('sourceImage');
+				console.log("drawing image");
 				ctx.drawImage(img, 40 / zoom, 40 / zoom);
 			}
 			//document.getElementById('sourceImage').src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
