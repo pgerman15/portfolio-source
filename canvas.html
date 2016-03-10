@@ -72,9 +72,9 @@
 
 			function zoomIn(){
 				document.getElementById('sourceImage').src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+				img = document.getElementById('sourceImage');
 				ctx.scale(2, 2); 
 				zoom = zoom * 2;
-				img = document.getElementById('sourceImage');
 				console.log("clearing");
 				//ctx.clearRect(0, 0, canvas.width, canvas.height);
 				drawImage();
