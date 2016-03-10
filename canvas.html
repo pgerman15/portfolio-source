@@ -52,7 +52,7 @@
 			}, false);
 			
 			canvas.addEventListener("touchmove", function (e) {
-			e.preventDefault();
+				e.preventDefault();
 				//alert("mouse is down: " + mouseIsDown);
 				if(mouseIsDown){
 					ctx.fillRect(e.pageX / zoom, e.pageY / zoom, 4, 4);
