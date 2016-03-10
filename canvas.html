@@ -70,7 +70,9 @@
 			}, false);
 
 			function zoom(){
-				
+				ctx.scale(2, 2); 
+				zoom = zoom * 2;
+				document.getElementById('sourceImage').src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
 			}
 			//document.getElementById('sourceImage').src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
 			
