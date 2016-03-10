@@ -12,7 +12,7 @@
 		<div id="slideout_inner">
 			<img id="sourceImage" width="0" height="0" src="https://pbs.twimg.com/profile_images/663229519/sogeti_spade.jpg" alt="The Spade">
 			<button onclick="ctx.drawImage(img, 40 / zoom, 40 / zoom);">draw spade</button>
-			<button onclick="zoomIn(); drawImage();">Zoom</button>
+			<button onclick="zoomIn(); ctx.drawImage(img, 40 / zoom, 40 / zoom);">Zoom</button>
 			<button onclick="ctx.scale(0.5, 0.5); zoom = zoom * 0.5;">un-zoom</button>
 		</div>
 	</div>
