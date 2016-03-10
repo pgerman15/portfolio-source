@@ -77,7 +77,11 @@
 				console.log("clearing");
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
 				console.log("drawing");
-				ctx.drawImage(img, 40 / zoom, 40 / zoom);
+				
+			}
+			
+			function drawImage(){
+				img = document.getElementById('sourceImage');
 				ctx.drawImage(img, 40 / zoom, 40 / zoom);
 			}
 			//document.getElementById('sourceImage').src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream")
