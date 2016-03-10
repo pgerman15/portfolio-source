@@ -41,6 +41,7 @@
 				}
 			}, false);
 			canvas.addEventListener("mousedown", function (e) {
+				console.log("mouse down");
 				mouseIsDown = true;
 				ctx.fillRect(e.pageX / zoom, e.pageY / zoom, 4, 4);
 			}, false);
